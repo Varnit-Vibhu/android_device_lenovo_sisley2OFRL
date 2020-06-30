@@ -76,7 +76,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KMODULES := true
 
 # Kernel
-#TODO upstream kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg/bootimg.mk
 TARGET_KERNEL_CONFIG := sisley2OFRL_n_defconfig
