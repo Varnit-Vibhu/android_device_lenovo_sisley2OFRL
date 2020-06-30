@@ -15,16 +15,16 @@
 #
 
 # call the proprietary setup
-$(call inherit-product, vendor/lenovo/aio_otfp/aio_otfp-vendor.mk)
+$(call inherit-product, vendor/lenovo/sisley2OFRL/sisley2OFRL-vendor.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_as_supl.mk)
 
-LOCAL_PATH := device/lenovo/aio_otfp
+LOCAL_PATH := device/lenovo/sisley2OFRL
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Audio policy & codec
 PRODUCT_COPY_FILES += \
@@ -153,5 +153,5 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.manual_sensor.xml:system/etc/permissions/android.hardware.camera.manual_sensor.xml
 
 # Dalvik & hwui defaults
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)

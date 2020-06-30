@@ -1,1 +1,1 @@
-CM-14.1 device tree for Lenovo K3-Note (aio_otfp)
+CM-14.1 Device Tree for Lenovo Vibe S1 (sisley2OFRL)

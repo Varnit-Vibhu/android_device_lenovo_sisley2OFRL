@@ -1,4 +1,4 @@
-LOCAL_PATH := device/lenovo/aio_otfp
+LOCAL_PATH := device/lenovo/sisley2OFRL
 
 MKIMAGE :=  $(LOCAL_PATH)/bootimg/mkimage
 

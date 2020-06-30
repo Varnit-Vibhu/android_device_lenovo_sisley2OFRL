@@ -1,4 +1,4 @@
-# system.prop for aio_otfp
+# system.prop for sisley2OFRL
 ro.hardware=mt6752
 ro.zygote.preload.enable=0
 service.adb.root=1
@@ -39,7 +39,7 @@ ro.sf.hwrotation=0
 
 # USB
 ro.sys.usb.mtp.whql.enable=0
-ro.sys.usb.storage.type=mtp,adb
+ro.sys.usb.storage.type=mtp,mass_storage,adb
 ro.sys.usb.bicr=yes
 ro.sys.usb.charging.only=yes
 ro.vold.umsdirtyratio=20
@@ -54,7 +54,7 @@ ro.camera.sound.forced=0
 #ro.mtk_audenh_support=1
 ro.mtk_audio_tuning_tool_ver=V1
 ro.mtk_dual_mic_support=1
-ro.lenovo.audioparaver=K50-T5_Audio_Parameters_MP_CN_20160322
+ro.lenovo.audioparaver=S91_audio_parameter_ROW_PVT_20150901
 
 # temporary enables NAV bar (soft keys)
 qemu.hw.mainkeys=1

@@ -15,9 +15,9 @@
 #
 
 # inherit from the proprietary version
--include vendor/lenovo/aio_otfp/BoardConfigVendor.mk
+-include vendor/lenovo/sisley2OFRL/BoardConfigVendor.mk
 
-LOCAL_PATH := device/lenovo/aio_otfp
+LOCAL_PATH := device/lenovo/sisley2OFRL
  
 MTK_K64_SUPPORT := yes
 
@@ -35,7 +35,7 @@ BOARD_PROTECT1IMAGE_PARTITION_SIZE:=10485760
 BOARD_PROTECT2IMAGE_PARTITION_SIZE:=10485760
 BOARD_SYSTEMIMAGE_PARTITION_SIZE:=2684354560
 BOARD_CACHEIMAGE_PARTITION_SIZE:=444596224
-BOARD_USERDATAIMAGE_PARTITION_SIZE:=1237319680
+BOARD_USERDATAIMAGE_PARTITION_SIZE:=27380416512
 
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -67,23 +67,24 @@ TARGET_CPU_CORTEX_A53 := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CPU_SMP := true
 
-BOARD_RAMDISK_OFFSET := 0x04000000
-BOARD_TAGS_OFFSET := 0xE000000
-BOARD_KERNEL_BASE := 0x40000000
+BOARD_RAMDISK_OFFSET := 0x03f88000
+BOARD_TAGS_OFFSET := 0x0df88000
+BOARD_KERNEL_BASE := 0x4dffff00
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KMODULES := true
 
 # Kernel
+#TODO upstream kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg/bootimg.mk
-TARGET_KERNEL_CONFIG := aio_otfp_n_defconfig
-TARGET_KERNEL_SOURCE := kernel/lenovo/aio_otfp
+TARGET_KERNEL_CONFIG := sisley2OFRL_n_defconfig
+TARGET_KERNEL_SOURCE := kernel/lenovo/sisley2OFRL
 TARGET_MTK_KERNEL := true
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := K50-t5,aio_otfp,aio_otfp_m,K3Note
+TARGET_OTA_ASSERT_DEVICE := S1a40,sisley2OFRL,VibeS1
 
 # recovery
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
@@ -115,14 +116,16 @@ TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # MTK Hardware
-BOARD_USES_MTK_HARDWARE := true
+BOARD_HAS_MTK_HARDWARE := true
+MTK_HARDWARE := true
+#BOARD_USES_MTK_HARDWARE := true
 BOARD_USES_LEGACY_MTK_AV_BLOB := true
 BOARD_USES_MTK_AUDIO := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 USE_CAMERA_STUB := true
 USE_MTK_CAMERA_WRAPPER := true
 BOARD_PROVIDES_RILD := true
-BOARD_RIL_CLASS := ../../../device/lenovo/aio_otfp/ril
+BOARD_RIL_CLASS := ../../../device/lenovo/sisley2OFRL/ril
 
 TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
@@ -193,4 +196,4 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # Hardware SEPolicy
 BOARD_SEPOLICY_DIRS += \
-    device/lenovo/aio_otfp/sepolicy
+    device/lenovo/sisley2OFRL/sepolicy
