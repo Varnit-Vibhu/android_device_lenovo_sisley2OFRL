@@ -76,10 +76,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KMODULES := true
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image.gz
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg/bootimg.mk
-TARGET_KERNEL_CONFIG := sisley2OFRL_n_defconfig
-TARGET_KERNEL_SOURCE := kernel/lenovo/sisley2OFRL
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/zimage
 TARGET_MTK_KERNEL := true
 
 # Recovery allowed devices
