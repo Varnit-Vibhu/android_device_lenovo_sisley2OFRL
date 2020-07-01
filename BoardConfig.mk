@@ -78,7 +78,7 @@ TARGET_KMODULES := true
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/bootimg/bootimg.mk
-TARGET_KERNEL_CONFIG := sisley2OFRL_n_defconfig
+TARGET_KERNEL_CONFIG := sisley2OFRL_defconfig
 TARGET_KERNEL_SOURCE := kernel/lenovo/sisley2OFRL
 TARGET_MTK_KERNEL := true
 
