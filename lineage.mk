@@ -20,7 +20,7 @@ $(call inherit-product, device/lenovo/sisley2OFRL/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_sisley2OFRL
-PRODUCT_DEVICE := S1a40
+PRODUCT_DEVICE := sisley2OFRL
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo S1a40
 PRODUCT_MANUFACTURER := LENOVO

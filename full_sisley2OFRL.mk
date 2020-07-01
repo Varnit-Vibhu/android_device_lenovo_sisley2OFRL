@@ -13,7 +13,7 @@ LOCAL_PATH := device/lenovo/sisley2OFRL
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq    
        
-PRODUCT_DEVICE := S1a40
+PRODUCT_DEVICE := sisley2OFRL
 PRODUCT_NAME := lineage_sisley2OFRL
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo S1a40
