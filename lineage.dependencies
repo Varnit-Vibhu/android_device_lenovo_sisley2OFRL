@@ -10,7 +10,7 @@
      "repository":   "Varnit-Vibhu/android_hardware_lenovo_sisley2OFRL",
      "target_path":  "hardware/lenovo/sisley2OFRL",
      "revision":     "cm-14.1"
-  }
+  },
   {
      "remote":       "github",
      "repository":   "Varnit-Vibhu/proprietary_vendor_lenovo_sisley2OFRL",
