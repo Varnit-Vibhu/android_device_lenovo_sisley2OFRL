@@ -4,8 +4,8 @@
 # ==============================================
 # Type Declaration
 # ==============================================
-type guiext-server, domain;
-type guiext-server_exec, exec_type, file_type;
+type guiext-server_exec , exec_type, file_type;
+type guiext-server ,domain;
 
 # ==============================================
 # MTK Policy Rule
@@ -15,8 +15,8 @@ init_daemon_domain(guiext-server)
 # for bqdump and conversion pool
 binder_service(guiext-server)
 binder_use(guiext-server)
-binder_call({domain -init}, guiext-server)
-binder_call(guiext-server, {domain -init})
+binder_call({domain -system_server}, guiext-server)
+binder_call(guiext-server, {domain -system_server})
 
 # to allocate GraphicBuffer
 allow guiext-server surfaceflinger:binder call;

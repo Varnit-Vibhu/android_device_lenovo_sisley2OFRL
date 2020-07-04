@@ -82,9 +82,9 @@ allow mediaserver Vcodec_device:chr_file { read write ioctl open };
 # Date : WK14.36
 # Operation : Migration
 # Purpose : MMProfile debug
-# userdebug_or_eng(`
+userdebug_or_eng(`
 allow mediaserver debugfs:file {read ioctl getattr};
-# ')
+')
 
 # Date : WK14.36
 # Operation : Migration
